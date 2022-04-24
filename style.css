@@ -104,11 +104,21 @@ body{
 	font-weight: bold;
 }
 
-.txtAboveTable{
+.select{
 	display: flex;
 	position: absolute;
 	right:20%;
 	top: 14%;
+}
+
+.select > button{
+	border: 1px solid #BCECE0;
+	border-radius: 5px;
+	width: 85px;
+	padding: 3px;
+	background-color: #BCECE0;
+	font-size: 20px;
+	margin:0 5px;
 }
 
 .restart{

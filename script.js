@@ -1,31 +1,35 @@
 
 let gameBoard = (() => { /** Module Pattern */
     'use strict';
- 
-    return {
-        gameTable: () => {
-            let board = [
-                'X','O','O',
-                'X','X','X',
-                'O','O','X'
-            ]
+    
+    let _board = [ /** Private array */
+        'X','O','O',
+        'X','X','X',
+        'O','O','X'
+    ]
+     
+    function gameTable(){
+        for ( let i = 0 ; i < _board.length ; i++){
+            let table = document.querySelector('.table');
+            let el = document.createElement('button');
+            table.appendChild(el).className = 'el';
+            el.innerText = _board[i];
         }
     }
+    
+    return { /** Revealing Module Pattern */
+        gameTable: gameTable
+    }
+
 })();
+
+gameBoard.gameTable();
+
 
 
 
 let displayController = (() => {
     'use strict';
-
-    for ( let i = 0 ; i < 9 ; i++){
-        let table = document.querySelector('.table');
-        let el = document.createElement('button');
-        table.appendChild(el).className = 'el';
-
-        
-    }
-
 
 })();
 

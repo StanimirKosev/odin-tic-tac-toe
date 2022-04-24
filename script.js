@@ -1,11 +1,3 @@
-/** Gameboard object = { gameboard = []}   check*/
-/** players in objects    */
-/** object for flow in game */
-
-/** module or factory ; one of something ( gameboard displayCOntroller - module) 
- * multiples of something - factory
-*/
-
 
 let gameBoard = (() => { /** Module Pattern */
     'use strict';
@@ -13,16 +5,26 @@ let gameBoard = (() => { /** Module Pattern */
     return {
         gameTable: () => {
             let board = [
-                '','','',
-                '','','',
-                '','',''
+                'X','O','O',
+                'X','X','X',
+                'O','O','X'
             ]
         }
     }
 })();
 
+
+
 let displayController = (() => {
     'use strict';
+
+    for ( let i = 0 ; i < 9 ; i++){
+        let table = document.querySelector('.table');
+        let el = document.createElement('button');
+        table.appendChild(el).className = 'el';
+
+        
+    }
 
 
 })();

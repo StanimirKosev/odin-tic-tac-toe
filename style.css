@@ -122,11 +122,19 @@ body{
 }
 
 .restart{
-	margin-top: 40px;
+	margin-top: 60px;
 	border: 1px solid #BCECE0;
 	border-radius: 5px;
 	width: 250px;
 	padding: 7px;
 	background-color: #BCECE0;
 	font-size: 20px;
+}
+
+.winner{
+	position: absolute;
+	top: 84%;
+	color: #BCECE0;
+	font-size: 30px;
+	font-weight: bold;
 }

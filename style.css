@@ -105,10 +105,19 @@ body{
 }
 
 .select{
-	display: flex;
+	display: grid;
+	grid-template-columns: 0.5fr 0.5fr;
+	align-items: center;
+	justify-items: center;
 	position: absolute;
 	right:20%;
-	top: 14%;
+	top: 12%;
+}
+
+.select > p{
+	color: #BCECE0;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 .select > button{

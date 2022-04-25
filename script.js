@@ -54,7 +54,7 @@ let playGame = (() => {
     });
 
     let winner = document.querySelector('.winner');
-    const buttons = document.querySelectorAll('[data-el-index]');
+    const el = document.querySelectorAll('[data-el-index]'); // el for restart/stop game functions
 
     function plays(event){
         if (event.target.className === "el"){
@@ -107,14 +107,14 @@ let playGame = (() => {
         winner.textContent = winningPlayer='';
         for (let i = 0 ; i < arr.length ; i++){
             arr[i]='';
-            buttons[i].innerText = '';
-            buttons[i].disabled = false;
+            el[i].innerText = '';
+            el[i].disabled = false;
         }
     }
 
     function stopGame(){
         for (let i = 0 ; i < arr.length ; i++){
-            buttons[i].disabled = true;
+            el[i].disabled = true;
         }
     }
 
